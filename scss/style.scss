@@ -1,0 +1,19 @@
+@import "reset";
+@import "fonts";
+@import "header";
+@import "burger";
+@import "hero";
+
+
+body {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+main {
+    margin-top: 60px;
+    display: block;
+    z-index: 10;
+    height: vh;
+}

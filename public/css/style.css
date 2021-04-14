@@ -1,1 +1,425 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+main,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 109.66px;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 67.77px;
+  font-weight: 200;
+}
+
+h3 {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 41.89px;
+  font-weight: 400;
+}
+
+h4 {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 25.89px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+li > a {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 25.89px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/* Header */
+header {
+  width: 100vw;
+  height: 60px;
+  position: -moz-sticky;
+  position: -o-sticky;
+  position: -ms-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  margin: 8px;
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav .logo {
+  position: relative;
+  height: 36px;
+  width: auto;
+  margin: auto;
+}
+
+nav .logo #logoTop {
+  height: 100%;
+  width: auto;
+  margin: auto;
+  fill: blue;
+}
+
+/*
+ * Made by Erik Terwan
+ * 24th of November 2015
+ * MIT License
+ *
+ *
+ * If you are thinking of using this in
+ * production code, beware of the browser
+ * prefixes.
+ */
+#menuToggle {
+  display: block;
+  position: relative;
+  z-index: 1;
+  user-select: none;
+}
+
+#menuToggle a {
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+  color: tomato;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  /* hide this */
+  z-index: 2;
+  /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+/*
+  * Just a quick hamburger
+  */
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #000000;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/* 
+  * Transform all the slices of hamburger
+  * into a crossmark.
+  */
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #000;
+}
+
+/*
+  * But let's hide the middle one.
+  */
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+  * Ohyeah and the last one should go the other direction
+  */
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+  * Make this absolute positioned
+  * at the top left of the screen
+  */
+#menu {
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+  * And let's slide it in from the left
+  */
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  #menuToggle {
+    all: unset;
+  }
+  #menuToggle a {
+    all: unset;
+  }
+  #menuToggle a:hover {
+    all: unset;
+  }
+  #menuToggle input {
+    all: unset;
+  }
+  /*
+      * Just a quick hamburger
+      */
+  #menuToggle span {
+    all: unset;
+  }
+  #menuToggle span:first-child {
+    all: unset;
+  }
+  #menuToggle span:nth-last-child(2) {
+    all: unset;
+  }
+  /* 
+      * Transform all the slices of hamburger
+      * into a crossmark.
+      */
+  #menuToggle input:checked ~ span {
+    all: unset;
+  }
+  /*
+      * But let's hide the middle one.
+      */
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    all: unset;
+  }
+  /*
+      * Ohyeah and the last one should go the other direction
+      */
+  #menuToggle input:checked ~ span:nth-last-child(2) {
+    all: unset;
+  }
+  /*
+      * Make this absolute positioned
+      * at the top left of the screen
+      */
+  #menu {
+    all: unset;
+  }
+  #menu li {
+    all: unset;
+  }
+  /*
+      * And let's slide it in from the left
+      */
+  #menuToggle input:checked ~ ul {
+    all: unset;
+  }
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero .left #logoBitcoin {
+  display: inline-block;
+  height: 109.66px;
+  width: auto;
+  margin: 0;
+}
+
+.hero .right #logoWebsite {
+  height: 100%;
+  width: auto;
+  margin: auto;
+  fill: blue;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+main {
+  margin-top: 60px;
+  display: block;
+  z-index: 10;
+  height: vh;
+}
+/*# sourceMappingURL=style.css.map */

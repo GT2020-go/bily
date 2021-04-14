@@ -1,0 +1,23 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+
+    .left {
+        #logoBitcoin {
+            display: inline-block;
+            height: 109.66px;
+            width: auto;
+            margin: 0;
+        }
+    }
+
+    .right {
+
+        #logoWebsite {
+            height: 100%;
+            width: auto;
+            margin: auto;
+            fill: blue;
+        }
+    }
+}

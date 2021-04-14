@@ -1,0 +1,39 @@
+/* Header */
+
+header {
+
+    width: 100vw;
+    height: 60px;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -o-sticky;
+    position: -ms-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    margin: 8px;
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    .logo {
+        position: relative;
+        height: 36px;
+        width: auto;
+        margin: auto;
+
+        #logoTop {
+            height: 100%;
+            width: auto;
+            margin: auto;
+            fill: blue;
+        }
+    }
+}
