@@ -20,14 +20,8 @@
 }
 
 #menuToggle a {
-    text-decoration: none;
-    color: #232323;
-
     transition: color 0.3s ease;
-}
-
-#menuToggle a:hover {
-    color: tomato;
+    vertical-align: middle;
 }
 
 
@@ -59,7 +53,7 @@
     margin-bottom: 5px;
     position: relative;
 
-    background: #000000;
+    background: $font-color-primary;
 
     z-index: 1;
 
@@ -85,7 +79,6 @@
 #menuToggle input:checked~span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
-    background: #000;
 }
 
 /*
@@ -114,7 +107,7 @@
     padding: 50px;
     padding-top: 125px;
 
-    background: #ededed;
+    background: $bg-color-primary;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
@@ -138,20 +131,8 @@
 }
 
 
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-    #menuToggle {
-        all: unset;
-    }
-
-    #menuToggle a {
-        all: unset;
-    }
-
-    #menuToggle a:hover {
-        all: unset;
-    }
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
 
 
     #menuToggle input {
@@ -205,6 +186,7 @@
 
     #menu li {
         all: unset;
+        margin: 1em;
     }
 
     /*
@@ -212,5 +194,9 @@
       */
     #menuToggle input:checked~ul {
         all: unset;
+    }
+
+    nav {
+        flex-direction: row-reverse;
     }
 }

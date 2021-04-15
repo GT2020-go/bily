@@ -1,19 +1,27 @@
 @import "reset";
+@import "colors";
 @import "fonts";
 @import "header";
-@import "burger";
 @import "hero";
+@import "footer";
 
+* {
+    cursor: url(https://d7-creative.com/wp-content/uploads/2018/09/d7-Cursor.png), auto;
+}
 
 body {
-    height: 100%;
-    width: 100%;
-    position: relative;
+    background: $bg-color-primary;
 }
 
 main {
     margin-top: 60px;
     display: block;
     z-index: 10;
-    height: vh;
+}
+
+section {
+    margin-top: 60px;
+    display: block;
+    z-index: 10;
+    height: 100vh;
 }

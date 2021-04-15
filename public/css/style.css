@@ -2,209 +2,89 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
+html {
   border: 0;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-main,
-nav,
-section {
-  display: block;
-}
-
 body {
-  line-height: 1;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+  margin: 0;
 }
 
 p {
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
+  color: #000;
 }
 
 h1 {
   font-family: 'Work Sans', sans-serif;
-  font-size: 109.66px;
-  font-weight: 700;
+  font-size: 5rem;
+  font-weight: 500;
+  color: #fff;
 }
 
 h2 {
   font-family: 'Work Sans', sans-serif;
-  font-size: 67.77px;
+  font-size: 2.5rem;
   font-weight: 200;
+  color: #fff;
 }
 
 h3 {
   font-family: 'Work Sans', sans-serif;
-  font-size: 41.89px;
+  font-size: 2rem;
   font-weight: 400;
+  color: #fff;
 }
 
 h4 {
   font-family: 'Work Sans', sans-serif;
-  font-size: 25.89px;
+  font-size: 1.2rem;
   font-weight: 400;
   text-transform: uppercase;
+  color: #fff;
 }
 
-li > a {
+a {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: grey;
+}
+
+a:active {
+  color: blue;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #fff;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
   font-family: 'Work Sans', sans-serif;
   font-size: 25.89px;
   font-weight: 400;
   text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  transition: all 0.2s;
 }
 
-/* Header */
-header {
-  width: 100vw;
-  height: 60px;
-  position: -moz-sticky;
-  position: -o-sticky;
-  position: -ms-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-nav {
-  margin: 8px;
-  position: relative;
-  display: block;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-nav .logo {
-  position: relative;
-  height: 36px;
-  width: auto;
-  margin: auto;
-}
-
-nav .logo #logoTop {
-  height: 100%;
-  width: auto;
-  margin: auto;
-  fill: blue;
+.btn:hover {
+  color: #000000;
+  background-color: #fff;
 }
 
 /*
@@ -225,13 +105,8 @@ nav .logo #logoTop {
 }
 
 #menuToggle a {
-  text-decoration: none;
-  color: #232323;
   transition: color 0.3s ease;
-}
-
-#menuToggle a:hover {
-  color: tomato;
+  vertical-align: middle;
 }
 
 #menuToggle input {
@@ -258,7 +133,7 @@ nav .logo #logoTop {
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  background: #000000;
+  background: #fff;
   z-index: 1;
   transform-origin: 4px 0px;
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
@@ -279,7 +154,6 @@ nav .logo #logoTop {
 #menuToggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
-  background: #000;
 }
 
 /*
@@ -307,7 +181,7 @@ nav .logo #logoTop {
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
-  background: #ededed;
+  background: linear-gradient(90deg, #A445B2, #D41872, #FF0066);
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
@@ -328,17 +202,8 @@ nav .logo #logoTop {
   transform: none;
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  #menuToggle {
-    all: unset;
-  }
-  #menuToggle a {
-    all: unset;
-  }
-  #menuToggle a:hover {
-    all: unset;
-  }
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
   #menuToggle input {
     all: unset;
   }
@@ -382,6 +247,7 @@ nav .logo #logoTop {
   }
   #menu li {
     all: unset;
+    margin: 1em;
   }
   /*
       * And let's slide it in from the left
@@ -389,37 +255,153 @@ nav .logo #logoTop {
   #menuToggle input:checked ~ ul {
     all: unset;
   }
+  nav {
+    flex-direction: row-reverse;
+  }
+}
+
+/* Header */
+header {
+  height: 60px;
+  position: -moz-sticky;
+  position: -o-sticky;
+  position: -ms-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: linear-gradient(90deg, #A445B2, #D41872, #FF0066);
+}
+
+nav {
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  position: relative;
+  display: flex;
+}
+
+nav .logo {
+  position: absolute;
+  height: 36px;
+  width: 98vw;
+  margin: 0 auto 0 auto;
+  display: flex;
+  align-content: center;
+}
+
+nav .logo #logoTop {
+  height: 100%;
+  width: auto;
+  margin: auto;
+  fill: #fff;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  nav {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+  }
+  nav .logo {
+    position: relative;
+    margin: 0 auto 0 0;
+    display: block;
+    width: unset;
+  }
 }
 
 .hero {
+  height: 80vh;
   display: flex;
   flex-direction: column;
 }
 
 .hero .left #logoBitcoin {
   display: inline-block;
-  height: 109.66px;
-  width: auto;
+  height: 120px;
   margin: 0;
+  vertical-align: middle;
+}
+
+.hero .left p {
+  color: #fff;
 }
 
 .hero .right #logoWebsite {
-  height: 100%;
+  max-height: 109.66px;
+  max-width: 100%;
   width: auto;
   margin: auto;
-  fill: blue;
+  color: #fff;
+}
+
+.hero .right .imgWrapper {
+  width: 100%;
+}
+
+.hero .right .imgWrapper img {
+  display: block;
+  width: 100%;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .hero {
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 45% auto;
+  }
+  .hero .left {
+    grid-column: 1;
+    margin-left: 5rem;
+  }
+  .hero .right {
+    grid-column: 2;
+    margin-right: 5rem;
+    display: grid;
+    grid-template-rows: 25% auto auto;
+  }
+  .hero .right .coinmarketcap-currency-widget {
+    background: #fff;
+    border-radius: 10px;
+  }
+  .hero .right .imgWrapper {
+    z-index: 1;
+  }
+  .hero .right h3 {
+    padding: 0;
+    margin: 0;
+    z-index: 3;
+  }
+}
+
+footer {
+  height: 600px;
+  bottom: 0;
+  background: #fff;
+  color: #000;
+}
+
+* {
+  cursor: url(https://d7-creative.com/wp-content/uploads/2018/09/d7-Cursor.png), auto;
 }
 
 body {
-  height: 100%;
-  width: 100%;
-  position: relative;
+  background: linear-gradient(90deg, #A445B2, #D41872, #FF0066);
 }
 
 main {
   margin-top: 60px;
   display: block;
   z-index: 10;
-  height: vh;
+}
+
+section {
+  margin-top: 60px;
+  display: block;
+  z-index: 10;
+  height: 100vh;
 }
 /*# sourceMappingURL=style.css.map */
