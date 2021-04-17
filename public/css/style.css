@@ -504,7 +504,7 @@ nav .logo #logoTop {
 
 .parent.news {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 50%);
   grid-template-rows: repeat(4, auto);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
@@ -522,10 +522,13 @@ nav .logo #logoTop {
   justify-content: center;
 }
 
-.parent.news .div2.left1 .coinmarketcap-currency-widget {
+.parent.news .div2.left1 .newsfeed {
+  max-width: 80%;
+}
+
+.parent.news .div2.left1 .newsfeed .coinmarketcap-currency-widget {
   background: #fff7fa;
   border-radius: 10px;
-  margin: 5rem;
 }
 
 .parent.news .div3.right1 {
@@ -534,10 +537,8 @@ nav .logo #logoTop {
   justify-content: center;
 }
 
-.parent.news .div3.right1 .newsfeed .coinmarketcap-currency-marquee {
-  background: #fff7fa;
-  border-radius: 10px;
-  margin: 5rem;
+.parent.news .div3.right1 .newsfeed {
+  max-width: 80%;
 }
 
 .parent.news .div4.left2 {
@@ -696,7 +697,6 @@ body {
 }
 
 main {
-  margin-top: 60px;
   display: block;
   z-index: 10;
 }
@@ -704,5 +704,6 @@ main {
 section {
   display: block;
   z-index: 10;
+  padding-top: 60px;
 }
 /*# sourceMappingURL=style.css.map */

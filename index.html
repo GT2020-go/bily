@@ -124,9 +124,9 @@
         </section>
 
 
-        <section class="parent featured">
+        <section id="featured" class="parent featured">
             <div class="div1 sectionHeader">
-                <h2 id="featured">Featured</h2>
+                <h2>Featured</h2>
                 <p>Here are our favourite places to learn about blockchain and crypto investment</p>
             </div>
 
@@ -169,7 +169,7 @@
             </div>
         </section>
 
-        <section class="parent news">
+        <section id="news" class="parent news">
             <div class="div1 full1">
                 <h2>News</h2>
             </div>
@@ -184,6 +184,7 @@
             </div>
             <div class="div3 right1">
                 <div class="newsfeed">
+                    <h3>Live crypto prices by coinmarketcap</h3>
                     <div id="coinmarketcap-widget-marquee" coins="1,1027,52,74" currency="USD" theme="dark"
                         transparent="false" show-symbol-logo="true"></div>
                 </div>
@@ -216,10 +217,10 @@
 
         </section>
 
-        <section class="parent about">
+        <section id="about" class="parent about">
             <div class="div1 all1 bg"> </div>
             <div class="div2 full1">
-                <h2 id="about">About</h2>
+                <h2>About</h2>
             </div>
             <div class="div3 full2">
                 <p>Hey I'm G from codeok. <br>
@@ -237,10 +238,10 @@
         </section>
 
 
-        <section class="parent shop">
+        <section id="shop" class="parent shop">
             <div class="div1 all1 bg"> </div>
             <div class="div div2 full1">
-                <h2 id="shop">Shop</h2>
+                <h2>Shop</h2>
             </div>
             <div class="div div3 full2">
                 <p>coming soon...</p>
@@ -254,9 +255,9 @@
 
     </main>
 
-    <footer class="parent footer">
+    <footer id="contact" class="parent footer">
         <div class="div1 left1">
-            <h2 id="contact">Contact</h2>
+            <h2>Contact</h2>
         </div>
         <div class="div2 right1">
             <div class="logo">
@@ -306,10 +307,11 @@
     <script>
         AOS.init();
     </script>
+    <script async type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
+    <script defer type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <script async src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-a11y="true"></script>
-    <script async type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
-    <script async type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script>
+
     <!-- <script>
         var spread_shop_config = {
             shopName: 'bitcoiniloveyou',

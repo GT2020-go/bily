@@ -18,7 +18,7 @@ body {
 }
 
 main {
-    margin-top: 60px;
+    // margin-top: 60px;
     display: block;
     z-index: 10;
 }
@@ -26,4 +26,5 @@ main {
 section {
     display: block;
     z-index: 10;
+    padding-top: 60px;
 }

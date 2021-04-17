@@ -1,6 +1,6 @@
 .parent.news {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 50%);
     grid-template-rows: repeat(4, auto);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
@@ -17,10 +17,14 @@
         display: flex;
         justify-content: center;
 
-        .coinmarketcap-currency-widget {
-            background: $bg-color-secondary;
-            border-radius: 10px;
-            margin: 5rem;
+        .newsfeed {
+            max-width: 80%;
+
+
+            .coinmarketcap-currency-widget {
+                background: $bg-color-secondary;
+                border-radius: 10px;
+            }
         }
     }
 
@@ -30,12 +34,9 @@
         justify-content: center;
 
         .newsfeed {
-            .coinmarketcap-currency-marquee {
-                background: $bg-color-secondary;
-                border-radius: 10px;
-                margin: 5rem;
-            }
+            max-width: 80%;
         }
+
     }
 
     .div4.left2 {
