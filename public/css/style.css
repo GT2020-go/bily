@@ -66,7 +66,6 @@ a:active {
 }
 
 .btn.cta {
-  display: inline-block;
   padding: 0.35em 1.2em;
   border: 0.1em solid #fff;
   margin: 0 0.3em 0.3em 0;
@@ -383,8 +382,13 @@ nav .logo #logoTop {
   color: #fff;
 }
 
+.parent.hero .div2.left1 .btn.cta {
+  margin: auto;
+}
+
 .parent.hero .div2.left1 ul.socials {
   display: flex;
+  justify-content: center;
 }
 
 .parent.hero .div2.left1 ul.socials li {
@@ -463,6 +467,10 @@ nav .logo #logoTop {
   }
   .parent.hero .div2.left1 {
     margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .parent.hero .div2.left1 h1 {
+    text-align: center;
   }
   .parent.hero .div2.left1 #logoBitcoin {
     display: inline-block;
@@ -475,6 +483,7 @@ nav .logo #logoTop {
   }
   .parent.hero .div2.left1 ul.socials {
     display: flex;
+    justify-content: center;
   }
   .parent.hero .div2.left1 ul.socials li {
     margin: 2em;
@@ -974,12 +983,12 @@ footer.parent .div5.full2 {
     margin-left: 5rem;
   }
   footer.parent .div4.full1 {
-    margin-left: 5rem;
-    margin-right: 5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
   footer.parent .div5.full2 {
-    margin-left: 5rem;
-    margin-right: 5rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

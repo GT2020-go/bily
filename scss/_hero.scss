@@ -30,8 +30,14 @@
             color: $font-color-primary;
         }
 
+        .btn.cta {
+            margin: auto;
+
+        }
+
         ul.socials {
             display: flex;
+            justify-content: center;
 
             li {
                 margin: 2em;
@@ -101,7 +107,7 @@
         display: flex;
         flex-direction: column;
         justify-self: center;
-        ;
+
         // grid-template-columns: 1fr;
         // grid-template-rows: repeat(2, 1fr);
         // grid-column-gap: 0px;
@@ -123,6 +129,11 @@
         .div2.left1 {
             // grid-area: 1 / 1 / 2 / 2;
             margin-left: 2rem;
+            margin-right: 2rem;
+
+            h1 {
+                text-align: center;
+            }
 
             #logoBitcoin {
                 display: inline-block;
@@ -137,6 +148,8 @@
 
             ul.socials {
                 display: flex;
+                justify-content: center;
+                ;
 
                 li {
                     margin: 2em;
