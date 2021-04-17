@@ -1,26 +1,128 @@
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+.parent.hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 
+    .div1.full1 {
+        grid-area: 1 / 1 / 2 / 3;
+        background-image: url('/img/backgrounds/blob-haikei.svg');
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .div2.left1 {
+        grid-area: 1 / 1 / 2 / 2;
+        margin-left: 5rem;
+
+        #logoBitcoin {
+            display: inline-block;
+            height: 120px;
+            margin: 0;
+            vertical-align: middle;
+        }
+
+        p {
+            color: $font-color-primary;
+        }
+
+        ul.socials {
+            display: flex;
+
+            li {
+                margin: 2em;
+            }
+        }
+    }
+
+    .div3.right1 {
+        grid-area: 1 / 2 / 2 / 3;
+        background-image: url('/img/icons8_cryptocurrencies.png');
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        right: 0;
+        bottom: 0;
+
+    }
+
+    .div4.right2 {
+        grid-area: 1 / 2 / 2 / 3;
+        display: flex;
+        align-content: flex-end;
+        justify-content: flex-end;
+        margin-right: 5em;
+
+        h3 {
+            width: 80%;
+            padding: 0;
+            margin: 0;
+            z-index: 3;
+
+            align-self: flex-end;
+            height: fit-content;
+            bottom: 0
+        }
+
+        #logoWebsite {
+            max-height: 109.66px;
+            max-width: 100%;
+            width: auto;
+            margin: auto;
+            color: $font-color-primary;
+        }
+    }
+
+    .div5.right3 {
+        grid-area: 1 / 2 / 2 / 3;
+        display: flex;
+        align-content: flex-start;
+        margin-right: 5em;
+
+        .coinmarketcap-currency-widget {
+            background: $bg-color-secondary;
+            border-radius: 10px;
+            position: absolute;
+            float: left;
+        }
+    }
+
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
     .parent.hero {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr;
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        ;
+        // grid-template-columns: 1fr;
+        // grid-template-rows: repeat(2, 1fr);
+        // grid-column-gap: 0px;
+        // grid-row-gap: 0px;
 
         .div1.full1 {
-            grid-area: 1 / 1 / 2 / 3;
+            // grid-area: 1 / 1 / 2 / 3;
             background-image: url('/img/backgrounds/blob-haikei.svg');
             background-position: left;
             background-repeat: no-repeat;
             background-size: cover;
             width: 100%;
             height: 100%;
+            display: none;
+            margin-left: 2rem;
+            margin-right: 2rem;
         }
 
         .div2.left1 {
-            grid-area: 1 / 1 / 2 / 2;
-            margin-left: 5rem;
+            // grid-area: 1 / 1 / 2 / 2;
+            margin-left: 2rem;
 
             #logoBitcoin {
                 display: inline-block;
@@ -43,7 +145,7 @@
         }
 
         .div3.right1 {
-            grid-area: 1 / 2 / 2 / 3;
+            // grid-area: 1 / 2 / 2 / 3;
             background-image: url('/img/icons8_cryptocurrencies.png');
             background-position: left;
             background-repeat: no-repeat;
@@ -52,15 +154,15 @@
             height: 100%;
             right: 0;
             bottom: 0;
-
+            display: none;
         }
 
         .div4.right2 {
-            grid-area: 1 / 2 / 2 / 3;
+            // grid-area: 1 / 2 / 2 / 3;
             display: flex;
             align-content: flex-end;
             justify-content: flex-end;
-            margin-right: 5em;
+            // margin-right: 5em;
 
             h3 {
                 width: 80%;
@@ -83,18 +185,31 @@
         }
 
         .div5.right3 {
-            grid-area: 1 / 2 / 2 / 3;
+            // grid-area: 1 / 2 / 2 / 3;
             display: flex;
             align-content: flex-start;
-            margin-right: 5em;
+            // margin-right: 5em;
 
             .coinmarketcap-currency-widget {
                 background: $bg-color-secondary;
                 border-radius: 10px;
                 position: absolute;
                 float: left;
+                display: none;
             }
         }
 
     }
 }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

@@ -349,27 +349,120 @@ nav .logo #logoTop {
   }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+.parent.hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.parent.hero .div1.full1 {
+  grid-area: 1 / 1 / 2 / 3;
+  background-image: url("/img/backgrounds/blob-haikei.svg");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.parent.hero .div2.left1 {
+  grid-area: 1 / 1 / 2 / 2;
+  margin-left: 5rem;
+}
+
+.parent.hero .div2.left1 #logoBitcoin {
+  display: inline-block;
+  height: 120px;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.parent.hero .div2.left1 p {
+  color: #fff;
+}
+
+.parent.hero .div2.left1 ul.socials {
+  display: flex;
+}
+
+.parent.hero .div2.left1 ul.socials li {
+  margin: 2em;
+}
+
+.parent.hero .div3.right1 {
+  grid-area: 1 / 2 / 2 / 3;
+  background-image: url("/img/icons8_cryptocurrencies.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+}
+
+.parent.hero .div4.right2 {
+  grid-area: 1 / 2 / 2 / 3;
+  display: flex;
+  align-content: flex-end;
+  justify-content: flex-end;
+  margin-right: 5em;
+}
+
+.parent.hero .div4.right2 h3 {
+  width: 80%;
+  padding: 0;
+  margin: 0;
+  z-index: 3;
+  align-self: flex-end;
+  height: fit-content;
+  bottom: 0;
+}
+
+.parent.hero .div4.right2 #logoWebsite {
+  max-height: 109.66px;
+  max-width: 100%;
+  width: auto;
+  margin: auto;
+  color: #fff;
+}
+
+.parent.hero .div5.right3 {
+  grid-area: 1 / 2 / 2 / 3;
+  display: flex;
+  align-content: flex-start;
+  margin-right: 5em;
+}
+
+.parent.hero .div5.right3 .coinmarketcap-currency-widget {
+  background: #fff7fa;
+  border-radius: 10px;
+  position: absolute;
+  float: left;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
   .parent.hero {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
   }
   .parent.hero .div1.full1 {
-    grid-area: 1 / 1 / 2 / 3;
     background-image: url("/img/backgrounds/blob-haikei.svg");
     background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     height: 100%;
+    display: none;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
   .parent.hero .div2.left1 {
-    grid-area: 1 / 1 / 2 / 2;
-    margin-left: 5rem;
+    margin-left: 2rem;
   }
   .parent.hero .div2.left1 #logoBitcoin {
     display: inline-block;
@@ -387,7 +480,6 @@ nav .logo #logoTop {
     margin: 2em;
   }
   .parent.hero .div3.right1 {
-    grid-area: 1 / 2 / 2 / 3;
     background-image: url("/img/icons8_cryptocurrencies.png");
     background-position: left;
     background-repeat: no-repeat;
@@ -396,13 +488,12 @@ nav .logo #logoTop {
     height: 100%;
     right: 0;
     bottom: 0;
+    display: none;
   }
   .parent.hero .div4.right2 {
-    grid-area: 1 / 2 / 2 / 3;
     display: flex;
     align-content: flex-end;
     justify-content: flex-end;
-    margin-right: 5em;
   }
   .parent.hero .div4.right2 h3 {
     width: 80%;
@@ -421,19 +512,22 @@ nav .logo #logoTop {
     color: #fff;
   }
   .parent.hero .div5.right3 {
-    grid-area: 1 / 2 / 2 / 3;
     display: flex;
     align-content: flex-start;
-    margin-right: 5em;
   }
   .parent.hero .div5.right3 .coinmarketcap-currency-widget {
     background: #fff7fa;
     border-radius: 10px;
     position: absolute;
     float: left;
+    display: none;
   }
 }
 
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* Large devices (laptops/desktops, 992px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
 .card {
   /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -445,11 +539,6 @@ nav .logo #logoTop {
   flex-direction: column;
   /* On mouse-over, add a deeper shadow */
   /* Add some padding inside the card container */
-}
-
-.card .card-img-top {
-  height: 10rem;
-  margin: auto;
 }
 
 .card:hover {
@@ -502,6 +591,42 @@ nav .logo #logoTop {
   margin-right: 5rem;
 }
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .parent.featured {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background: #fff7fa;
+    z-index: 1;
+  }
+  .parent.featured .div1 {
+    grid-area: 1 / 1 / 2 / 3;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .parent.featured .div1 h2 {
+    color: #000;
+  }
+  .parent.featured .div2.cards {
+    grid-area: 2 / 1 / 3 / 3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .parent.featured .card {
+    width: 80vw;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* Large devices (laptops/desktops, 992px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
 .parent.news {
   display: grid;
   grid-template-columns: repeat(2, 50%);
@@ -565,6 +690,56 @@ nav .logo #logoTop {
   color: #fff;
 }
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .parent.news {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .parent.news .div2.left1 {
+    display: flex;
+    justify-content: center;
+  }
+  .parent.news .div2.left1 .newsfeed {
+    display: none;
+  }
+  .parent.news .div2.left1 .newsfeed .coinmarketcap-currency-widget {
+    background: #fff7fa;
+    border-radius: 10px;
+  }
+  .parent.news .div3.right1 {
+    display: flex;
+    justify-content: center;
+  }
+  .parent.news .div3.right1 .newsfeed {
+    max-width: 80%;
+  }
+  .parent.news .div4.left2 {
+    display: flex;
+    justify-content: center;
+  }
+  .parent.news .div5.right2 {
+    display: flex;
+    justify-content: center;
+  }
+  .parent.news .div6.full2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-bottom: 2em;
+  }
+  .parent.news .div6.full2 p {
+    color: #fff;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* Large devices (laptops/desktops, 992px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
 .about {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -598,13 +773,51 @@ nav .logo #logoTop {
   margin-bottom: 2em;
 }
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 2fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background: #fff7fa;
+  }
+  .about .div1.all1.bg {
+    grid-area: 1 / 1 / 3 / 3;
+    background-image: linear-gradient(rgba(255, 247, 250, 0.466), rgba(255, 247, 250, 0.466)), url("/img/backgrounds/circle-scatter-haikei (1).svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .about .div2.full1 {
+    grid-area: 1 / 1 / 2 / 3;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .about .div2.full1 h2 {
+    color: #000;
+  }
+  .about .div3.full2 {
+    grid-area: 2 / 1 / 3 / 3;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2em;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* Large devices (laptops/desktops, 992px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
 section.shop {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto 2fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  background: #fff7fa;
+  background-image: linear-gradient(#1d0022, #1d0022), url("/img/backgrounds/circle-scatter-haikei.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 section.shop .div1.all1.bg {
@@ -639,9 +852,53 @@ section.shop .div3.full2 p {
   color: #fff;
 }
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  section.shop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 2fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background-image: linear-gradient(#1d0022, #1d0022), url("/img/backgrounds/circle-scatter-haikei.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  section.shop .div1.all1.bg {
+    grid-area: 1 / 1 / 3 / 3;
+    background-image: linear-gradient(#1d0022, #1d0022), url("/img/backgrounds/circle-scatter-haikei.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  section.shop .div1.all1.bg p {
+    color: #fff;
+  }
+  section.shop .div2.full1 {
+    grid-area: 1 / 1 / 2 / 3;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  section.shop .div2.full1 p {
+    color: #fff;
+  }
+  section.shop .div3.full2 {
+    grid-area: 2 / 1 / 3 / 3;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2em;
+  }
+  section.shop .div3.full2 p {
+    color: #fff;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* Large devices (laptops/desktops, 992px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
 footer.parent {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-template-rows: auto auto repeat(2, auto);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
@@ -660,6 +917,7 @@ footer.parent .div2.right1 {
 
 footer.parent .div2.right1 .logo {
   padding: 2rem;
+  width: 80%;
 }
 
 footer.parent .div2.right1 .logo #logoBottom {
@@ -686,8 +944,52 @@ footer.parent .div5.full2 {
   margin-right: 5rem;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  footer.parent {
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+  }
+  footer.parent .div1.left1 {
+    margin-left: 2rem;
+  }
+  footer.parent .div2.right1 {
+    margin-right: 2rem;
+  }
+  footer.parent .div2.right1 .logo {
+    padding: 2rem;
+    width: 80%;
+  }
+  footer.parent .div2.right1 .logo #logoBottom {
+    height: 80%;
+    width: auto;
+    margin: auto;
+    fill: #fff;
+  }
+  footer.parent .div3.left2 {
+    margin-left: 5rem;
+  }
+  footer.parent .div4.full1 {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+  footer.parent .div5.full2 {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* Large devices (laptops/desktops, 992px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
 * {
   cursor: url(https://d7-creative.com/wp-content/uploads/2018/09/d7-Cursor.png), auto;
 }

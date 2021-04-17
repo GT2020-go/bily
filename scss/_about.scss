@@ -33,3 +33,54 @@
     }
 
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .about {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto 2fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        background: $bg-color-secondary;
+
+
+
+        .div1.all1.bg {
+            grid-area: 1 / 1 / 3 / 3;
+            background-image: linear-gradient($bg-color-secondary-transparent, $bg-color-secondary-transparent), url('/img/backgrounds/circle-scatter-haikei\ \(1\).svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .div2.full1 {
+            grid-area: 1 / 1 / 2 / 3;
+            margin-left: 2rem;
+            margin-right: 2rem;
+
+            h2 {
+                color: $font-color-secondary;
+            }
+        }
+
+        .div3.full2 {
+            grid-area: 2 / 1 / 3 / 3;
+            margin-left: 2rem;
+            margin-right: 2rem;
+            margin-bottom: 2em;
+        }
+
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
