@@ -1,9 +1,14 @@
 // Theme colors
 
 $bg-color-primary: linear-gradient(90deg, #A445B2, #D41872, #FF0066);
-$bg-color-secondary: #fff;
+$bg-color-secondary: #fff7fa;
+$bg-color-secondary-transparent: rgba(255, 247, 250, 0.466);
+$bg-color-tertiary-transparent: rgba(29, 0, 34, 1);
 
 $font-color-primary: #fff;
 $font-color-secondary: #000;
 $font-color-link-hover: grey;
 $font-color-link-active: blue;
+
+
+$font-color-disclaimer: #332d2f;

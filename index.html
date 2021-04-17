@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bitcoin I love you - An ode to the first crypto currency</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Work+Sans:wght@300;400;500;700&display=swap"
@@ -56,25 +57,27 @@
         </nav>
     </header>
     <main>
-        <section class="hero grid" id="home">
 
-            <div class="left">
+        <section class="parent hero" id="home">
+            <div class="div1 full1"></div>
+            <div class="div2 left1">
                 <h4>Cryptos are booming,</h4>
                 <h1>it's <span><img id="logoBitcoin" src="/img/Bitcoin.png" alt="Bitcoin logo"></span> time!</h1>
                 <h2>This is an ode to Bitcoin</h2>
                 <div class="btn cta">Join us now</div>
-                <p>Maybe you just started last week... Maybe years ago! Like us you've lived through the amazing journey
+                <p>Maybe you just started last week... Maybe years ago! Like us you've lived through the amazing
+                    journey
                     of
                     Bitcoin. Share your Bily story with us and for future generations.</p>
-                <div class="socials">tbd</div>
+                <ul class="socials">
+                    <li><a href="https://twitter.com/BitcoinILoveYou"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.facebook.com/Bitcoiniloveyoucom-101472538742858"><i
+                                class="fab fa-facebook-f"></i></a></li>
+                </ul>
             </div>
-            <div class="right">
-
-                <div class="coinmarketcap-currency-widget" data-currencyid="1" data-base="USD" data-secondary=""
-                    data-ticker="false" data-rank="false" data-marketcap="false" data-volume="false"
-                    data-statsticker="false" data-stats="USD"></div>
-                <div class="imgWrapper"> <img src="/img/icons8_cryptocurrencies.png"
-                        alt="Very happy blond woman holds Bitcoin in left hand and dollars in right hand"></div>
+            <div class="div3 right1">
+            </div>
+            <div class="div4 right2">
                 <h3><a href=""><span>
                             <?xml version="1.0" encoding="UTF-8" standalone="no"?>
                             <svg id="logoWebsite" xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -111,132 +114,202 @@
                                 </g>
                             </svg>
                         </span></a></h3>
+
+            </div>
+            <div class="div5 right3">
+                <div class="coinmarketcap-currency-widget" data-currencyid="1" data-base="USD" data-secondary=""
+                    data-ticker="false" data-rank="false" data-marketcap="false" data-volume="false"
+                    data-statsticker="false" data-stats="USD"></div>
             </div>
         </section>
-        <!-- <section class="featured">
-            <h2 id="featured">Featured</h2>
-            <div class="p">These are our favourite places to learn about blockchain and investment</div>
 
-            <div class="cards">
-                <div class="card" style="width:400px">
+
+        <section class="parent featured">
+            <div class="div1 sectionHeader">
+                <h2 id="featured">Featured</h2>
+                <p>Here are our favourite places to learn about blockchain and crypto investment</p>
+            </div>
+
+
+            <div class="div2 cards">
+                <div class="card" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000"
+                    data-aos-easing="ease-in-out">
                     <img class="card-img-top" src="/img/www.youtube.com_c_Hasheur.png" alt="Hasheur Youtube Channel">
                     <div class="card-body">
                         <h4 class="card-title">Hasheur</h4>
                         <p class="card-text">Meilleur vulgarisateur crypto en francais</p>
-                        <a href="#" class="btn btn-primary">See Profile</a>
+                        <a href="https://www.youtube.com/channel/UChlTcWDE8gd4tsl_L727NrQ"
+                            class="btn card-btn">Watch</a>
                     </div>
                 </div>
-                <div class="card" style="width:400px">
+                <div class="card" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000"
+                    data-aos-easing="ease-in-out">
                     <img class="card-img-top" src="/img/www.youtube.com_c_EnterTheCryptoMatrix.png"
                         alt="Crypto Matrix Youtube Channel">
                     <div class="card-body">
                         <h4 class="card-title">CryptoMatrix</h4>
-                        <p class="card-text">Une daily vidéo qui détaille les news du marché des crypto monnaies.</p>
-                        <a href="#" class="btn btn-primary">See Profile</a>
+                        <p class="card-text">Une daily vidéo qui détaille les news du marché des crypto monnaies.
+                        </p>
+                        <a href="https://www.youtube.com/channel/UCefQC4Y-X9MBRuYBKc2waiQ"
+                            class="btn card-btn">Watch</a>
                     </div>
                 </div>
-                <div class="card" style="width:400px">
+                <div class="card" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000"
+                    data-aos-easing="ease-in-out">
                     <img class="card-img-top" src="/img/www.coinbase.com_fr_.png" alt="Coinbase.com">
                     <div class="card-body">
                         <h4 class="card-title">Coinbase</h4>
                         <p class="card-text">The most (in)Famous Crypto platform.</p>
-                        <a href="#" class="btn btn-primary">See Profile</a>
+                        <a href="https://www.coinbase.com/join/therea_0" class="btn card-btn">Join</a>
+                        <p class="disclaimer">Disclaimer: This is a referral link. I'll earn a small commission if you
+                            subscribe through this link. Thank you.
+                        </p>
                     </div>
                 </div>
             </div>
-            <button class="cta">Start on Coinbase now</button>
-            <p>Disclaimer: This is a referral link. I'll earn a commission if you subscribe through this link. <br>
-                Thank you.
-            </p>
         </section>
-        <section class="news">
-            <h2>News</h2>
-            <div class="newsfeed">
-                <h3>Live crypto prices by coinmarketcap</h3>
-                <div class="coinmarketcap-currency-widget" data-currencyid="1" data-base="USD" data-secondary=""
-                    data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-statsticker="true"
-                    data-stats="USD">
+
+        <section class="parent news">
+            <div class="div1 full1">
+                <h2>News</h2>
+            </div>
+            <div class="div2 left1">
+                <div class="newsfeed">
+                    <h3>Live crypto prices by coinmarketcap</h3>
+                    <div class="coinmarketcap-currency-widget" data-currencyid="1" data-base="USD" data-secondary=""
+                        data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true"
+                        data-statsticker="true" data-stats="USD">
+                    </div>
                 </div>
             </div>
+            <div class="div3 right1">
+                <div class="newsfeed">
+                    <div id="coinmarketcap-widget-marquee" coins="1,1027,52,74" currency="USD" theme="dark"
+                        transparent="false" show-symbol-logo="true"></div>
+                </div>
+            </div>
+            <div class="div4 left2">
+                <div class="newsfeed">
+                    <h3>Tweets by
+                        CryptoMatrix2</h3>
+                    <a class="twitter-timeline" data-width="400" data-height="600"
+                        href="https://twitter.com/CryptoMatrix2?ref_src=twsrc%5Etfw">Tweets by
+                        CryptoMatrix2</a>
+                </div>
+            </div>
+            <div class="div5 right2">
+                <div class="newsfeed">
+                    <h3>Tweets by
+                        PowerHasheur</h3>
+                    <a class="twitter-timeline" data-width="400" data-height="600"
+                        href="https://twitter.com/PowerHasheur?ref_src=twsrc%5Etfw">Tweets by
+                        PowerHasheur</a>
+                </div>
+            </div>
+            <div class="div6 full2">
+                <p>Leave your thoughts about bitcoin here</p>
 
-            <div class="newsfeed">
-                <h3>Tweets by
-                    CryptoMatrix2</h3>
-                <a class="twitter-timeline" href="https://twitter.com/CryptoMatrix2?ref_src=twsrc%5Etfw">Tweets by
-                    CryptoMatrix2</a>
+                <div class="newsfeed">
+                    <a href="https://twitter.com/intent/tweet?button_hashtag=BitcoinILoveYou&ref_src=twsrc%5Etfw"
+                        class="twitter-hashtag-button" data-show-count="false">Tweet #BitcoinILoveYou</a>
+                </div>
+
+        </section>
+
+        <section class="parent about">
+            <div class="div1 all1 bg"> </div>
+            <div class="div2 full1">
+                <h2 id="about">About</h2>
             </div>
-            <div class="newsfeed">
-                <h3>Tweets by
-                    PowerHasheur</h3>
-                <a class="twitter-timeline" href="https://twitter.com/PowerHasheur?ref_src=twsrc%5Etfw">Tweets by
-                    PowerHasheur</a>
-            </div>
-            <div class="newsfeed">
+            <div class="div3 full2">
+                <p>Hey I'm G from codeok. <br>
+                    I'm a web developer since few months only and decided to build this website. <br>
+                    Back in 2017, I bought my first satoshis. Then came the Bull run :D and right after... the
+                    desert storm and I lost interest in cryptocurrencies and the blockchain. <br>
+                    Not so long ago, during the summer of 2020 I started watching more news about
+                    Bitcoin and Ethereum. Things started to get very exciting last december 2020 :D and since
+                    then I put all my attention to it.</p>
+
+                <p>You too have a Bitcoin story. Share it !</p>
                 <a href="https://twitter.com/intent/tweet?button_hashtag=BitcoinILoveYou&ref_src=twsrc%5Etfw"
                     class="twitter-hashtag-button" data-show-count="false">Tweet #BitcoinILoveYou</a>
             </div>
+        </section>
 
-        </section>
-        <section class="about">
-            <h2>About</h2>
-            <p>Hey I'm G from codeok. <br>
-                I'm a web developer since few months only and decided to build this website to share with you. <br>
-                Back in 2017, I bought my first satoshis on Coinbase. Then came the Blil run :D and right after... the
-                desert storm. I lost interest in cryptocurrencies and the blockchain. <br>
-                It's not so long ago I gained interest again during summer of 2020 I started watching more news about
-                Bitcoin (#BTC) and Ethereum (ETH). Things started to get very exciting last december 2020 :D and since
-                then I put all my attention to it.</p>
-            <button class="cta">To The Moon</button>
-            <p>You too have a Bitcoin story. Share it !</p>
-        </section>
-        <section class="shop" name="shop">
-            <h2 id="shop">Shop</h2>
-            <p>coming soon...</p>
-            <button class="cta">Buy now</button>
-            <p>:D</p>
-            <!-- <div id="myShop">
-                <a href="https://shop.spreadshirt.fr/bitcoiniloveyou">bitcoiniloveyou</a>
-            </div> -->
 
+        <section class="parent shop">
+            <div class="div1 all1 bg"> </div>
+            <div class="div div2 full1">
+                <h2 id="shop">Shop</h2>
+            </div>
+            <div class="div div3 full2">
+                <p>coming soon...</p>
+                <p>:D</p>
+                <!-- <div id="myShop">
+                    <a href="https://shop.spreadshirt.fr/bitcoiniloveyou">bitcoiniloveyou</a>
+                </div> -->
+            </div>
         </section>
+
+
     </main>
-    <footer>
-        <div class="logo">
-            <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-            <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"
-                xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
-                xmlns="http://www.w3.org/2000/svg" id="svg50" version="1.1" viewBox="0 0 255.63696 77.965587">
-                <defs id="defs44" />
-                <g transform="translate(-23.83661,-213.84924)" id="layer1">
-                    <g style="fill:#000000" id="g32-0" transform="matrix(0.2993105,0,0,0.27765524,13.061432,196.30143)">
-                        <path id="path_B1"
-                            d="M 173.6,328.4 V 312.8 H 156 138.4 V 293.2 273.6 H 120.8 103.2 V 258 242.4 H 85.6 68 V 223.2 204 H 52 36 V 151.2 98.4 H 52 68 V 80.8 63.2 h 54.4 54.4 V 80.8 98.4 H 194.4 212 V 80.8 63.2 h 54.4 54.4 v 17.6 17.6 h 16 16 v 52.8 52.8 h -16 -16 v 19.2 19.2 H 303.2 285.6 V 258 273.6 H 268 250.4 v 19.6 19.6 H 232.8 215.2 V 328.4 344 H 194.4 173.6 Z M 184,264 v -8.8 h 11.2 11.2 v 8.8 8.8 h 8.4 8.4 v -8.8 -8.8 h 7.6 7.6 v -8.8 -8.8 h 8.8 8.8 V 220 202.4 h -8.8 -8.8 v -9.2 -9.2 h 8.8 8.8 v -17.6 -17.6 h -8.8 -8.8 v -8.8 -8.8 h -7.6 -7.6 v -8.4 -8.4 h -8.4 -8.4 v 8.4 8.4 H 195.2 184 v -8.4 -8.4 h -8.4 -8.4 v 8.4 8.4 H 149.6 132 v 62 62 h 17.6 17.6 v 8.8 8.8 h 8.4 8.4 z M 167.2,220 V 202.4 H 194 220.8 V 220 237.6 H 194 167.2 Z m 0,-53.2 v -18 h 26.8 26.8 v 18 18 H 194 167.2 Z"
-                            style="display:inline;stroke-width:0.80000001" />
-                    </g>
-                    <path id="path_Bily1"
-                        d="m 153.06303,270.06048 v -2.56772 h -5.23419 -5.23423 v -17.38148 -17.38147 h 5.23423 5.23419 v -2.3702 -2.37021 h 2.37019 2.37022 v 2.37021 2.3702 h 3.45655 3.45654 v -2.3702 -2.37021 h 2.46896 2.46895 v 2.37021 2.3702 h 2.27146 2.27142 v 2.46895 2.46896 h 2.66648 2.66648 v 4.93792 4.93793 h -2.66648 -2.66648 v 2.56771 2.56773 h 2.66648 2.66648 v 4.93792 4.93792 h -2.66648 -2.66648 v 2.46896 2.46895 h -2.27142 -2.27146 v 2.56772 2.56771 h -2.46895 -2.46896 v -2.56771 -2.56772 h -3.45654 -3.45655 v 2.56772 2.56771 h -2.37022 -2.37019 z m 15.90011,-12.3448 v -4.93793 l -8.04882,-0.0515 -8.04881,-0.0515 v 5.04111 5.04113 l 8.04881,-0.0515 8.04882,-0.0515 z m 0.0527,-14.96189 0.0527,-5.08607 h -8.10152 -8.10153 v 5.13766 5.13765 l 8.04881,-0.0515 8.04881,-0.0515 z m 83.68064,28.82339 c -0.055,-0.14353 -0.0746,-1.14345 -0.0432,-2.22206 l 0.0569,-1.96112 8.78949,-0.0988 8.78948,-0.0988 v -1.97518 -1.97515 l -8.78948,-0.0988 -8.78949,-0.0988 -0.0558,-2.22206 -0.056,-2.22206 h -2.16621 -2.16622 v -6.71559 -6.71556 h 4.52175 c 4.01729,0 4.5357,0.0362 4.64665,0.32544 0.0687,0.17901 0.11784,3.17879 0.10926,6.6662 l -0.0157,6.34075 h 6.34179 6.3418 l -0.0156,-6.34075 c -0.008,-3.48741 0.0407,-6.48719 0.10926,-6.6662 0.11096,-0.28912 0.62936,-0.32544 4.64665,-0.32544 h 4.52175 v 11.1597 11.1597 h -2.17269 -2.17267 v 2.17268 2.1727 h -11.16589 c -9.07136,0 -11.1847,-0.0489 -11.26605,-0.26097 z m -70.796,-6.35215 v -2.26775 l 4.4935,-0.053 4.4935,-0.0531 v -6.51806 -6.51805 l -2.22206,-0.056 -2.22206,-0.0558 v -2.26497 -2.26497 h 6.71555 6.71559 v 8.88826 8.88825 h 4.44412 4.44413 v 2.27143 2.27145 h -13.43114 -13.43113 z m 35.55301,-0.004 v -2.27144 h 4.34536 4.34538 v -11.05448 -11.05447 l -2.22207,-0.0559 -2.22205,-0.056 v -2.07391 -2.07392 l 6.76495,-0.052 6.76495,-0.0519 v 13.23244 13.23245 l 4.39475,0.0531 4.39474,0.0532 0.0558,2.22206 0.0559,2.22207 h -13.33875 -13.33888 v -2.27145 z m -26.46724,-26.56599 v -2.17269 h 4.44412 4.44414 v 2.17269 2.17269 h -4.44414 -4.44412 z"
-                        style="display:inline;stroke-width:0.1975168" />
-                </g>
-            </svg>
+
+    <footer class="parent footer">
+        <div class="div1 left1">
+            <h2 id="contact">Contact</h2>
         </div>
-        <h2 id="contact">Contact</h2>
-        <li>
-        <li><a href="https://twitter.com/Codeok_io"><i class="fab fa-twitter"></i> @BitcoinILoveYou</a></li>
-        <li><a href="https://www.facebook.com/Bitcoiniloveyoucom-101472538742858"><i class="fab fa-facebook-f"></i>
-                Facebook</a></li>
-        </li>
-        <p class="credits">
-            Photo Credits: <a href="https://icons8.com/photos">icons8.com</a>
-        </p>
-        <p>&#169; 2021 bitcoiniloveyou.com - <i class="fas fa-laptop-code"></i> Made with <i class="fas fa-heart"></i>
-            by G at <a href="http://www.codeok.io">codeok.io</a>
-            Twitter: <a href="https://twitter.com/Codeok_io"><i class="fab fa-twitter"></i> @codeok_io</a></p>
+        <div class="div2 right1">
+            <div class="logo">
+                <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+                <svg id="logoBottom" xmlns:dc="http://purl.org/dc/elements/1.1/"
+                    xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                    xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" id="svg50" version="1.1"
+                    viewBox="0 0 255.63696 77.965587">
+                    <defs id="defs44" />
+                    <g transform="translate(-23.83661,-213.84924)" id="layer1">
+                        <g id="g32-0" transform="matrix(0.2993105,0,0,0.27765524,13.061432,196.30143)">
+                            <path id="path_B1"
+                                d="M 173.6,328.4 V 312.8 H 156 138.4 V 293.2 273.6 H 120.8 103.2 V 258 242.4 H 85.6 68 V 223.2 204 H 52 36 V 151.2 98.4 H 52 68 V 80.8 63.2 h 54.4 54.4 V 80.8 98.4 H 194.4 212 V 80.8 63.2 h 54.4 54.4 v 17.6 17.6 h 16 16 v 52.8 52.8 h -16 -16 v 19.2 19.2 H 303.2 285.6 V 258 273.6 H 268 250.4 v 19.6 19.6 H 232.8 215.2 V 328.4 344 H 194.4 173.6 Z M 184,264 v -8.8 h 11.2 11.2 v 8.8 8.8 h 8.4 8.4 v -8.8 -8.8 h 7.6 7.6 v -8.8 -8.8 h 8.8 8.8 V 220 202.4 h -8.8 -8.8 v -9.2 -9.2 h 8.8 8.8 v -17.6 -17.6 h -8.8 -8.8 v -8.8 -8.8 h -7.6 -7.6 v -8.4 -8.4 h -8.4 -8.4 v 8.4 8.4 H 195.2 184 v -8.4 -8.4 h -8.4 -8.4 v 8.4 8.4 H 149.6 132 v 62 62 h 17.6 17.6 v 8.8 8.8 h 8.4 8.4 z M 167.2,220 V 202.4 H 194 220.8 V 220 237.6 H 194 167.2 Z m 0,-53.2 v -18 h 26.8 26.8 v 18 18 H 194 167.2 Z"
+                                style="display:inline;stroke-width:0.80000001" />
+                        </g>
+                        <path id="path_Bily1"
+                            d="m 153.06303,270.06048 v -2.56772 h -5.23419 -5.23423 v -17.38148 -17.38147 h 5.23423 5.23419 v -2.3702 -2.37021 h 2.37019 2.37022 v 2.37021 2.3702 h 3.45655 3.45654 v -2.3702 -2.37021 h 2.46896 2.46895 v 2.37021 2.3702 h 2.27146 2.27142 v 2.46895 2.46896 h 2.66648 2.66648 v 4.93792 4.93793 h -2.66648 -2.66648 v 2.56771 2.56773 h 2.66648 2.66648 v 4.93792 4.93792 h -2.66648 -2.66648 v 2.46896 2.46895 h -2.27142 -2.27146 v 2.56772 2.56771 h -2.46895 -2.46896 v -2.56771 -2.56772 h -3.45654 -3.45655 v 2.56772 2.56771 h -2.37022 -2.37019 z m 15.90011,-12.3448 v -4.93793 l -8.04882,-0.0515 -8.04881,-0.0515 v 5.04111 5.04113 l 8.04881,-0.0515 8.04882,-0.0515 z m 0.0527,-14.96189 0.0527,-5.08607 h -8.10152 -8.10153 v 5.13766 5.13765 l 8.04881,-0.0515 8.04881,-0.0515 z m 83.68064,28.82339 c -0.055,-0.14353 -0.0746,-1.14345 -0.0432,-2.22206 l 0.0569,-1.96112 8.78949,-0.0988 8.78948,-0.0988 v -1.97518 -1.97515 l -8.78948,-0.0988 -8.78949,-0.0988 -0.0558,-2.22206 -0.056,-2.22206 h -2.16621 -2.16622 v -6.71559 -6.71556 h 4.52175 c 4.01729,0 4.5357,0.0362 4.64665,0.32544 0.0687,0.17901 0.11784,3.17879 0.10926,6.6662 l -0.0157,6.34075 h 6.34179 6.3418 l -0.0156,-6.34075 c -0.008,-3.48741 0.0407,-6.48719 0.10926,-6.6662 0.11096,-0.28912 0.62936,-0.32544 4.64665,-0.32544 h 4.52175 v 11.1597 11.1597 h -2.17269 -2.17267 v 2.17268 2.1727 h -11.16589 c -9.07136,0 -11.1847,-0.0489 -11.26605,-0.26097 z m -70.796,-6.35215 v -2.26775 l 4.4935,-0.053 4.4935,-0.0531 v -6.51806 -6.51805 l -2.22206,-0.056 -2.22206,-0.0558 v -2.26497 -2.26497 h 6.71555 6.71559 v 8.88826 8.88825 h 4.44412 4.44413 v 2.27143 2.27145 h -13.43114 -13.43113 z m 35.55301,-0.004 v -2.27144 h 4.34536 4.34538 v -11.05448 -11.05447 l -2.22207,-0.0559 -2.22205,-0.056 v -2.07391 -2.07392 l 6.76495,-0.052 6.76495,-0.0519 v 13.23244 13.23245 l 4.39475,0.0531 4.39474,0.0532 0.0558,2.22206 0.0559,2.22207 h -13.33875 -13.33888 v -2.27145 z m -26.46724,-26.56599 v -2.17269 h 4.44412 4.44414 v 2.17269 2.17269 h -4.44414 -4.44412 z"
+                            style="display:inline;stroke-width:0.1975168" />
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <div class="div3 left2">
+            <ul>
+                <li><a href="https://twitter.com/BitcoinILoveYou"><i class="fab fa-twitter"></i>
+                        #BitcoinILoveYou</a></li>
+                <li><a href="https://www.facebook.com/Bitcoiniloveyoucom-101472538742858"><i
+                            class="fab fa-facebook-f"></i> Facebook</a></li>
+            </ul>
+        </div>
+        </div>
+        <div class="div4 full1">
+            <p class="credits">
+                Photo Credits: <a href="https://icons8.com/photos">icons8.com</a>
+            </p>
+        </div>
+        <div class="div5 full2">
+            <p>&#169; 2021 bitcoiniloveyou.com - <i class="fas fa-laptop-code"></i> Made with <i
+                    class="fas fa-heart"></i>
+                by G at <a href="http://www.codeok.io">codeok.io</a>
+                Twitter: <a href="https://twitter.com/Codeok_io"><i class="fab fa-twitter"></i> @codeok_io</a></p>
+        </div>
     </footer>
 
     <!--Scripts-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-a11y="true"></script>
+    <script async src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-a11y="true"></script>
     <script async type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
+    <script async type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script>
     <!-- <script>
         var spread_shop_config = {
             shopName: 'bitcoiniloveyou',
@@ -246,8 +319,8 @@
         };
     </script> -->
 
-    <!-- <script type="text/javascript" src="https://shop.spreadshirt.fr/shopfiles/shopclient/shopclient.nocache.js"> -->
-    </script>
+    <!-- <script type="text/javascript" src="https://shop.spreadshirt.fr/shopfiles/shopclient/shopclient.nocache.js"> </script>-->
+
 </body>
 
 </html>

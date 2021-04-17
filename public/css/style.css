@@ -65,7 +65,7 @@ a:active {
   color: blue;
 }
 
-.btn {
+.btn.cta {
   display: inline-block;
   padding: 0.35em 1.2em;
   border: 0.1em solid #fff;
@@ -82,9 +82,46 @@ a:active {
   transition: all 0.2s;
 }
 
-.btn:hover {
+.btn.cta:hover {
   color: #000000;
   background-color: #fff;
+}
+
+li {
+  list-style-type: none;
+  font-size: 1rem;
+}
+
+ul {
+  padding: 0;
+}
+
+.btn.card-btn {
+  align-self: center;
+  border-radius: 0.12em;
+  padding: 0.35em 1.2em;
+  font-size: 25.89px;
+  font-weight: 400;
+  padding: .5rem 3rem;
+  box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+  border: solid 3px transparent;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(90deg, #A445B2, #D41872, #FF0066);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 2px 1000px 1px #fff7fa inset;
+  color: #000;
+}
+
+.btn.card-btn:hover {
+  box-shadow: none;
+  color: white;
+}
+
+p.disclaimer {
+  font-family: 'Roboto', sans-serif;
+  font-size: .8rem;
+  font-style: italic;
+  color: #332d2f;
 }
 
 /*
@@ -312,76 +349,342 @@ nav .logo #logoTop {
   }
 }
 
-.hero {
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.hero .left #logoBitcoin {
-  display: inline-block;
-  height: 120px;
-  margin: 0;
-  vertical-align: middle;
-}
-
-.hero .left p {
-  color: #fff;
-}
-
-.hero .right #logoWebsite {
-  max-height: 109.66px;
-  max-width: 100%;
-  width: auto;
-  margin: auto;
-  color: #fff;
-}
-
-.hero .right .imgWrapper {
-  width: 100%;
-}
-
-.hero .right .imgWrapper img {
-  display: block;
-  width: 100%;
-}
-
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  .hero {
-    height: 80vh;
+  .parent.hero {
     display: grid;
-    grid-template-columns: 45% auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
   }
-  .hero .left {
-    grid-column: 1;
+  .parent.hero .div1.full1 {
+    grid-area: 1 / 1 / 2 / 3;
+    background-image: url("/img/backgrounds/blob-haikei.svg");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .parent.hero .div2.left1 {
+    grid-area: 1 / 1 / 2 / 2;
     margin-left: 5rem;
   }
-  .hero .right {
-    grid-column: 2;
-    margin-right: 5rem;
-    display: grid;
-    grid-template-rows: 25% auto auto;
+  .parent.hero .div2.left1 #logoBitcoin {
+    display: inline-block;
+    height: 120px;
+    margin: 0;
+    vertical-align: middle;
   }
-  .hero .right .coinmarketcap-currency-widget {
-    background: #fff;
-    border-radius: 10px;
+  .parent.hero .div2.left1 p {
+    color: #fff;
   }
-  .hero .right .imgWrapper {
-    z-index: 1;
+  .parent.hero .div2.left1 ul.socials {
+    display: flex;
   }
-  .hero .right h3 {
+  .parent.hero .div2.left1 ul.socials li {
+    margin: 2em;
+  }
+  .parent.hero .div3.right1 {
+    grid-area: 1 / 2 / 2 / 3;
+    background-image: url("/img/icons8_cryptocurrencies.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+  }
+  .parent.hero .div4.right2 {
+    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    align-content: flex-end;
+    justify-content: flex-end;
+    margin-right: 5em;
+  }
+  .parent.hero .div4.right2 h3 {
+    width: 80%;
     padding: 0;
     margin: 0;
     z-index: 3;
+    align-self: flex-end;
+    height: fit-content;
+    bottom: 0;
+  }
+  .parent.hero .div4.right2 #logoWebsite {
+    max-height: 109.66px;
+    max-width: 100%;
+    width: auto;
+    margin: auto;
+    color: #fff;
+  }
+  .parent.hero .div5.right3 {
+    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    align-content: flex-start;
+    margin-right: 5em;
+  }
+  .parent.hero .div5.right3 .coinmarketcap-currency-widget {
+    background: #fff7fa;
+    border-radius: 10px;
+    position: absolute;
+    float: left;
   }
 }
 
-footer {
-  height: 600px;
-  bottom: 0;
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
   background: #fff;
+  width: 30rem;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  /* On mouse-over, add a deeper shadow */
+  /* Add some padding inside the card container */
+}
+
+.card .card-img-top {
+  height: 10rem;
+  margin: auto;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card .card-body {
+  padding: 1rem;
+  min-height: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card .card-body h4 {
   color: #000;
+  align-self: center;
+}
+
+.card .card-body .btn {
+  justify-self: center;
+}
+
+.parent.featured {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  background: #fff7fa;
+  z-index: 1;
+}
+
+.parent.featured .div1 {
+  grid-area: 1 / 1 / 2 / 3;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.parent.featured .div1 h2 {
+  color: #000;
+}
+
+.parent.featured .div2.cards {
+  grid-area: 2 / 1 / 3 / 3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.parent.news {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.parent.news .div1.full1 {
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+.parent.news .div2.left1 {
+  grid-area: 2 / 1 / 3 / 2;
+  display: flex;
+  justify-content: center;
+}
+
+.parent.news .div2.left1 .coinmarketcap-currency-widget {
+  background: #fff7fa;
+  border-radius: 10px;
+  margin: 5rem;
+}
+
+.parent.news .div3.right1 {
+  grid-area: 2 / 2 / 3 / 3;
+  display: flex;
+  justify-content: center;
+}
+
+.parent.news .div3.right1 .newsfeed .coinmarketcap-currency-marquee {
+  background: #fff7fa;
+  border-radius: 10px;
+  margin: 5rem;
+}
+
+.parent.news .div4.left2 {
+  grid-area: 3 / 1 / 4 / 2;
+  display: flex;
+  justify-content: center;
+}
+
+.parent.news .div5.right2 {
+  grid-area: 3 / 2 / 4 / 3;
+  display: flex;
+  justify-content: center;
+}
+
+.parent.news .div6.full2 {
+  grid-area: 4 / 1 / 5 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin-bottom: 2em;
+}
+
+.parent.news .div6.full2 p {
+  color: #fff;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto 2fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  background: #fff7fa;
+}
+
+.about .div1.all1.bg {
+  grid-area: 1 / 1 / 3 / 3;
+  background-image: linear-gradient(rgba(255, 247, 250, 0.466), rgba(255, 247, 250, 0.466)), url("/img/backgrounds/circle-scatter-haikei (1).svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about .div2.full1 {
+  grid-area: 1 / 1 / 2 / 3;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.about .div2.full1 h2 {
+  color: #000;
+}
+
+.about .div3.full2 {
+  grid-area: 2 / 1 / 3 / 3;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-bottom: 2em;
+}
+
+section.shop {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto 2fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  background: #fff7fa;
+}
+
+section.shop .div1.all1.bg {
+  grid-area: 1 / 1 / 3 / 3;
+  background-image: linear-gradient(#1d0022, #1d0022), url("/img/backgrounds/circle-scatter-haikei.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+section.shop .div1.all1.bg p {
+  color: #fff;
+}
+
+section.shop .div2.full1 {
+  grid-area: 1 / 1 / 2 / 3;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+section.shop .div2.full1 p {
+  color: #fff;
+}
+
+section.shop .div3.full2 {
+  grid-area: 2 / 1 / 3 / 3;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-bottom: 2em;
+}
+
+section.shop .div3.full2 p {
+  color: #fff;
+}
+
+footer.parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto repeat(2, auto);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  z-index: 10;
+}
+
+footer.parent .div1.left1 {
+  grid-area: 1 / 1 / 2 / 2;
+  margin-left: 5rem;
+}
+
+footer.parent .div2.right1 {
+  grid-area: 1 / 2 / 2 / 3;
+  margin-right: 5rem;
+}
+
+footer.parent .div2.right1 .logo {
+  padding: 2rem;
+}
+
+footer.parent .div2.right1 .logo #logoBottom {
+  height: 80%;
+  width: auto;
+  margin: auto;
+  fill: #fff;
+}
+
+footer.parent .div3.left2 {
+  grid-area: 2 / 1 / 3 / 2;
+  margin-left: 5rem;
+}
+
+footer.parent .div4.full1 {
+  grid-area: 3 / 1 / 4 / 3;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+footer.parent .div5.full2 {
+  grid-area: 4 / 1 / 5 / 3;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  display: flex;
+  justify-content: center;
 }
 
 * {
@@ -399,9 +702,7 @@ main {
 }
 
 section {
-  margin-top: 60px;
   display: block;
   z-index: 10;
-  height: 100vh;
 }
 /*# sourceMappingURL=style.css.map */

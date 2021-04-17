@@ -1,0 +1,33 @@
+@import "card";
+
+.parent.featured {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background: $bg-color-secondary;
+    z-index: 1;
+
+
+    .div1 {
+        grid-area: 1 / 1 / 2 / 3;
+        margin-left: 5rem;
+        margin-right: 5rem;
+
+        h2 {
+            color: $font-color-secondary;
+        }
+    }
+
+
+    .div2.cards {
+        grid-area: 2 / 1 / 3 / 3;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+
+}

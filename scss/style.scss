@@ -3,6 +3,10 @@
 @import "fonts";
 @import "header";
 @import "hero";
+@import "featured";
+@import "news";
+@import "about";
+@import "shop";
 @import "footer";
 
 * {
@@ -20,8 +24,6 @@ main {
 }
 
 section {
-    margin-top: 60px;
     display: block;
     z-index: 10;
-    height: 100vh;
 }
