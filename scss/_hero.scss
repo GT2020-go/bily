@@ -73,17 +73,25 @@
 
             align-self: flex-end;
             height: fit-content;
-            bottom: 0
-        }
 
-        #logoWebsite {
-            max-height: 109.66px;
-            max-width: 100%;
-            width: auto;
-            margin: auto;
-            color: $font-color-primary;
+            bottom: 0;
+
+            a {
+                span {
+                    fill: $font-color-secondary;
+                }
+            }
         }
     }
+
+    #logoWebsite {
+        max-height: 109.66px;
+        max-width: 100%;
+        width: auto;
+        margin: auto;
+        color: $font-color-primary;
+    }
+
 
     .div5.right3 {
         grid-area: 1 / 2 / 2 / 3;
@@ -185,7 +193,14 @@
 
                 align-self: flex-end;
                 height: fit-content;
-                bottom: 0
+
+                bottom: 0;
+
+                a {
+                    span {
+                        fill: $font-color-primary
+                    }
+                }
             }
 
             #logoWebsite {
@@ -202,6 +217,7 @@
             display: flex;
             align-content: flex-start;
             // margin-right: 5em;
+            display: none;
 
             .coinmarketcap-currency-widget {
                 background: $bg-color-secondary;

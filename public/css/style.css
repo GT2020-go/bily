@@ -425,7 +425,11 @@ nav .logo #logoTop {
   bottom: 0;
 }
 
-.parent.hero .div4.right2 #logoWebsite {
+.parent.hero .div4.right2 h3 a span {
+  fill: #000;
+}
+
+.parent.hero #logoWebsite {
   max-height: 109.66px;
   max-width: 100%;
   width: auto;
@@ -513,6 +517,9 @@ nav .logo #logoTop {
     height: fit-content;
     bottom: 0;
   }
+  .parent.hero .div4.right2 h3 a span {
+    fill: #fff;
+  }
   .parent.hero .div4.right2 #logoWebsite {
     max-height: 109.66px;
     max-width: 100%;
@@ -523,6 +530,7 @@ nav .logo #logoTop {
   .parent.hero .div5.right3 {
     display: flex;
     align-content: flex-start;
+    display: none;
   }
   .parent.hero .div5.right3 .coinmarketcap-currency-widget {
     background: #fff7fa;
@@ -548,6 +556,11 @@ nav .logo #logoTop {
   flex-direction: column;
   /* On mouse-over, add a deeper shadow */
   /* Add some padding inside the card container */
+}
+
+.card .card-img-top {
+  width: 100%;
+  margin: auto;
 }
 
 .card:hover {
@@ -721,7 +734,7 @@ nav .logo #logoTop {
   }
   .parent.news .div3.right1 {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
   }
   .parent.news .div3.right1 .newsfeed {
     max-width: 80%;
@@ -907,7 +920,7 @@ section.shop .div3.full2 p {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 footer.parent {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto auto repeat(2, auto);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
@@ -926,12 +939,9 @@ footer.parent .div2.right1 {
 
 footer.parent .div2.right1 .logo {
   padding: 2rem;
-  width: 80%;
 }
 
 footer.parent .div2.right1 .logo #logoBottom {
-  height: 80%;
-  width: auto;
   margin: auto;
   fill: #fff;
 }
@@ -967,20 +977,17 @@ footer.parent .div5.full2 {
     margin-left: 2rem;
   }
   footer.parent .div2.right1 {
-    margin-right: 2rem;
+    margin-left: 2rem;
   }
   footer.parent .div2.right1 .logo {
-    padding: 2rem;
+    padding: 0rem;
     width: 80%;
   }
   footer.parent .div2.right1 .logo #logoBottom {
-    height: 80%;
-    width: auto;
-    margin: auto;
     fill: #fff;
   }
   footer.parent .div3.left2 {
-    margin-left: 5rem;
+    margin-left: 2rem;
   }
   footer.parent .div4.full1 {
     margin-left: 2rem;

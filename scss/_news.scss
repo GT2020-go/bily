@@ -101,7 +101,7 @@
         .div3.right1 {
             // grid-area: 2 / 2 / 3 / 3;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
 
             .newsfeed {
                 max-width: 80%;
