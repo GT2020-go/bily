@@ -19,18 +19,18 @@
     <header>
         <nav role="navigation">
             <div id="menuToggle">
-                <input type="checkbox" />
+                <input id="ticker" type="checkbox" />
                 <span></span>
                 <span></span>
                 <span></span>
 
                 <ul id="menu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#featured">Featured</a></li>
-                    <li><a href="#news">News</a></li>
-                    <li><a href="#about"> About</a></li>
-                    <li><a href="#shop">Shop</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home" onclick="closeNav()">Home</a></li>
+                    <li><a href="#featured" onclick="closeNav()">Featured</a></li>
+                    <li><a href="#news" onclick="closeNav()">News</a></li>
+                    <li><a href="#about" onclick="closeNav()"> About</a></li>
+                    <li><a href="#shop" onclick="closeNav()">Shop</a></li>
+                    <li><a href="#contact" onclick="closeNav()">Contact</a></li>
                 </ul>
 
             </div>
@@ -373,6 +373,10 @@
 
     <script type="text/javascript"
         src="https://shop.spreadshirt.fr/shopfiles/shopclient/shopclient.nocache.js"> </script> -->
+
+    <script>function closeNav() {
+            document.getElementById("ticker").checked = false;
+        }</script>
 
 </body>
 
